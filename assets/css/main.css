@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+/* // sass variable */
+:root {
+  --primary: 103, 61, 230;
+  --secondary: 47, 28, 106;
+  --gray: 134, 134, 134;
+  --white: 255, 255, 255;
+  --card-surface: 45, 133, 239;
+  --neon: 204, 255, 1;
+  --teal: 58, 232, 173;
+}
+
+a {
+  cursor: pointer !important;
+}
+
+p {
+  margin-bottom: 2px;
+}
+
+.v-align-middle {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+.font-monomaniac-one {
+  font-family: "Monomaniac One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+
+.app-padding {
+  padding: 0 7%;
+}
+.list-style-none {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.list-style-none a :hover {
+  text-decoration: underline;
+}
+
+.primary-action-btn {
+  border-radius: 8px !important;
+  background: rgb(103, 61, 230);
+  background: -moz-linear-gradient(
+    126deg,
+    rgba(103, 61, 230, 1) 29%,
+    rgba(57, 34, 128, 1) 96%
+  );
+  background: -webkit-linear-gradient(
+    126deg,
+    rgba(103, 61, 230, 1) 29%,
+    rgba(57, 34, 128, 1) 96%
+  );
+  background: linear-gradient(
+    126deg,
+    rgba(103, 61, 230, 1) 29%,
+    rgba(57, 34, 128, 1) 96%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#673de6",endColorstr="#392280",GradientType=1);
+  color: #fff !important;
+  text-transform: none !important;
+  padding: var(--padding);
+  text-decoration: none !important;
+  /* padding: var(attr(py))px 20px ; */
+}
+.section-title-veriant-2 h2,
+.section-title h2 {
+  font-size: 50px;
+  font-weight: 800;
+  color: rgb(var(--secondary));
+}
+.section-title-veriant-2 span,
+.section-title span {
+  color: rgb(var(--color), 0.8);
+  font-family: "Roboto Slab", serif;
+}
+
+.section-title .card-subtitle::after {
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: rgb(var(--color), 0.7);
+  position: relative;
+  bottom: 4px;
+  right: -10px;
+  border-radius: 3px;
+}
+
+.section-title span::before {
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: rgb(var(--color), 0.7);
+  position: relative;
+  bottom: 4px;
+  left: -10px;
+  border-radius: 3px;
+}
+.section-title-veriant-2 span::before {
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: rgb(var(--color), 0.8);
+  position: relative;
+  bottom: -2px;
+  left: -8px;
+}
+.text-shadow{
+  text-shadow: 2px 2px rgb(var(--secondary), 0.8);
+}
+.drop-shadow{
+  filter:drop-shadow(8px 6px 2px lightgray);
+}
+/* Nav bar logic */
+.navbar .brand-logo {
+  position: sticky;
+  top: -85px;
+}
+.navbar .icon {
+  color: rgb(var(--primary), 0.8);
+  font-size: 30px;
+}
+#app-footer .nav-text,
+.navbar .nav-text {
+  font-weight: 500;
+}
+#app-header .nav-link {
+  font-weight: 500;
+  font-size: 18px;
+  /* text-decoration: none; */
+  color: black;
+}
+#app-header .active-nav-link::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 3px;
+  background: rgb(var(--primary), 1);
+  position: relative;
+  bottom: -10;
+  left: 0;
+  border-radius: 3px;
+}

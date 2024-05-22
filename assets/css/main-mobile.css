@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+
+  .section-title-veriant-2 h2,
+  .section-title h2 {
+    font-size: 35px;
+    font-weight: 800;
+    font-family: "Roboto Slab", serif;
+    color: rgb(var(--color));
+  }
+  .section-title-veriant-2 span,
+  .section-title span {
+    color: rgb(var(--color), 0.8);
+    font-family: "Roboto Slab", serif;
+  }
+
+  .section-title .card-subtitle::after {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: rgb(var(--color), 0.7);
+    position: relative;
+    bottom: 4px;
+    right: -10px;
+    border-radius: 3px;
+  }
+
+  .section-title span::before {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: rgb(var(--color), 0.7);
+    position: relative;
+    bottom: 4px;
+    left: -10px;
+    border-radius: 3px;
+  }
+  .section-title-veriant-2 span::before {
+    display: inline-block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: rgb(var(--color), 0.8);
+    position: relative;
+    bottom: -2px;
+    left: -8px;
+  }
+
+
+  #feature-stats .stats-wrapper {
+    border-radius: 30px;
+    background: rgb(4, 34, 143, 1);
+    background: linear-gradient(
+      37deg,
+      rgba(8, 81, 192, 1) 0%,
+      rgba(4, 34, 143, 1) 46%
+    );
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+  }
+}

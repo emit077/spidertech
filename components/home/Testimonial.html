@@ -1,0 +1,47 @@
+<head>
+    <script>
+        $(documents).ready(function () {
+            console.log("sdsa")
+        });
+    </script>
+</head>
+<section id="feature-testimonial" class="py-5">
+    <div class="app-padding">
+        <div class="section-title text-center mb-5">
+            <h2>Real Stories from Real Customers?</h2>
+        </div>
+        <div id="testimonialCarousel" class="carousel carousel-dark slide" data-bs-ride="true">
+            <div class="carousel-inner" id="testimonialContainer">
+               
+            </div>
+            <!-- controll btns -->
+            <div class="d-flex" style="justify-content: end;">
+                <button id="" class="carousel-btn  d-none d-md-block me-2" type="button"
+                    data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="mdi mdi-arrow-left icon text-primary" style="font-size:25px;"></span>
+                </button>
+                <button id="nextBtn" class="carousel-btn d-none d-md-block" type="button"
+                    data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="mdi mdi-arrow-right icon text-primary" style="font-size:25px;"></span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    #feature-testimonial .quote-icon {
+        background-color: #CCFF01;
+    }
+    #feature-testimonial .user-profile-img {
+        width: 110%;
+        border-radius: 20px;
+    }
+    #feature-testimonial .carousel-btn {
+        background-color: transparent;
+        border: solid 2px rgb(var(--primary)) !important;
+        border-radius: 5px;
+    }
+
+</style>

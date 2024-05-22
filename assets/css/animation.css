@@ -1,0 +1,21 @@
+@keyframes move-lr {
+    10%   { left:-50px; top:-200px;}
+    0%   { left:0px; top:0px;}
+    25%  {left:-200px; top:200px;}
+    50%  {left:700px; top:200px;}
+    75%  {left:0px; top:600px;}
+    100% {left:-50px; top:-200px;}
+  }
+  @keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+
+
+  .move-circle-grp{
+    position: relative;
+    animation-delay: 1s;
+    animation-name: move-lr;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+  }
