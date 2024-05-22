@@ -53,7 +53,7 @@ $(document).ready(function () {
       img_url: "../../assets/icons/domain/calculator.svg",
     },
     {
-      title: "E-commerce",
+      title: "E-Commerce",
       img_url: "../../assets/icons/domain/shop.svg",
     },
     {
