@@ -10,6 +10,9 @@
   --neon: 204, 255, 1;
   --teal: 58, 232, 173;
 }
+html{
+  scroll-behavior: smooth !important;
+}
 
 a {
   cursor: pointer !important;
@@ -46,7 +49,6 @@ p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
-
 
 .app-padding {
   padding: 0 7%;
@@ -148,11 +150,12 @@ p {
 .navbar .nav-text {
   font-weight: 500;
 }
+#app-navbar .nav-link ,
 #app-header .nav-link {
   font-weight: 500;
   font-size: 18px;
   /* text-decoration: none; */
-  color: black;
+  color: rgb(var(--primary), 1);
 }
 #app-header .active-nav-link::after {
   display: block;
