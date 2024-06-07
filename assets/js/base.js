@@ -22,6 +22,6 @@ $(document).ready(function () {
 });
 
 function opennavbar(type) {
-  if (type == "open") $("#mobileMenuModel").width("60%");
+  if (type == "open") $("#mobileMenuModel").width("100%");
   else $("#mobileMenuModel").width("0%");
 }
