@@ -12,7 +12,7 @@
         </div>
         <div id="testimonialCarousel" class="carousel carousel-dark slide" data-bs-ride="true">
             <div class="carousel-inner" id="testimonialContainer">
-               
+
             </div>
             <!-- controll btns -->
             <div class="d-flex" style="justify-content: end;">
@@ -34,14 +34,21 @@
     #feature-testimonial .quote-icon {
         background-color: #CCFF01;
     }
+
     #feature-testimonial .user-profile-img {
-        width: 110%;
+        width: 100%;
         border-radius: 20px;
     }
+
     #feature-testimonial .carousel-btn {
         background-color: transparent;
         border: solid 2px rgb(var(--primary)) !important;
         border-radius: 5px;
     }
 
+    @media (max-width: 768px) {
+        #feature-testimonial .user-profile-img {
+            width: 60%;
+        }
+    }
 </style>

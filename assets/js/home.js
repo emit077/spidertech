@@ -110,7 +110,7 @@ $(document).ready(function () {
           i == 0 ? "active" : ""
         }" data-bs-interval="2000">
       <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 text-center">
               <img class="user-profile-img" src="${item.img_url}"
                   alt="" />
           </div>
