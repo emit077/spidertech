@@ -1,11 +1,11 @@
 <section id="app-navbar" class="d-inline ">
     <div class="d-none d-md-inline ">
-        <nav class="navbar navbar-expand-lg navbar-light app-padding py-1 pt-4  bg-white ">
+        <nav class="navbar navbar-expand-lg navbar-light app-padding py-1 pt-3  bg-white ">
             <!-- <nav class="navbar navbar-expand-lg navbar-light app-padding py-1 sticky-top bg-white"> -->
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <div class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <a class="navbar-brand" href="../">
-                        <img src="../../assets/images/logo/logo.svg" alt="" height="60px" />
+                        <img src="../../assets/images/logo/logo-solid.svg" alt="" height="60px" />
                     </a>
                 </div>
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -25,38 +25,42 @@
         </nav>
     </div>
     <!-- moibile bar -->
-    <header id="app-header" class=" app-padding bg-white p-1 pe-2 text-end  d-md-none">
-        <img src="../../assets/images/logo/logo.svg" alt="" width="100px" class="float-start mt-3 ms-2" />
-        <a class="text-decoration-none" data-bs-toggle="modal" href="#" role="button">
+    <header id="app-header" class="app-padding p-1 pe-2 text-end  d-md-none sticky-top bg-primary">
+        <img src="../../assets/images/logo/logo-white.svg" alt="" width="95px" class="float-start ms-2 mt-2" />
+        <button class="bg-transparent border-0" onclick="opennavbar('open')">
             <span class="mdi mdi-menu text-white" style="font-size: 35px;"></span>
-        </a>
+        </button>
     </header>
-    <div class="modal " id="mobileMenuModel" aria-hidden="true" aria-labelledby="mobileMenuModelLabel" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-top mt-0">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close" style="color: white !important" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-style-none">
-                        <li class="nav-item mb-4">
-                            <a class="nav-link  px-0 me-5" href="../">Home</a>
-                        </li>
-                        <li class="nav-item mb-4">
-                            <a class="nav-link px-0 me-5" href="#feature-stats">About Us</a>
-                        </li>
-                        <li class="nav-item mb-4">
-                            <a class="nav-link px-0 me-5" href="#app-footer">Contact Us</a>
-                        </li>
-                    </ul>
-                    <v-btn class="primary-action-btn ms-4" style="--padding: 10px 20px;">
-                        Login
-                    </v-btn>
-                </div>
-            </div>
+    <div id="mobileMenuModel">
+        <div class="text-end">
+            <button class="bg-transparent border-0 me-4 my-2" aria-label="Close" onclick="opennavbar('close')">
+                <span style="font-size: 25px;color: #fff;">x</span>
+            </button>
         </div>
+     
+        <ul class="list-style-none">
+            <li class="nav-item mb-4" data-bs-dismiss="modal">
+                <a class="nav-link text-white  px-0 me-5" href="../">Home</a>
+            </li>
+            <li class="nav-item mb-4" data-bs-dismiss="modal">
+                <a class="nav-link   text-white  px-0 me-5" href="#feature-stats" onclick="opennavbar('close')">About Us</a>
+            </li>
+            <li class="nav-item mb-4" data-bs-dismiss="modal">
+                <a class="nav-link  text-white  px-0 me-5" href="#app-footer" onclick="opennavbar('close')">Contact Us</a>
+            </li>
+        </ul>
     </div>
 </section>
-<script>
-</script>
+<style>
+  #mobileMenuModel{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0%;
+    transition-duration: 1s;
+    height: 100%;
+    color: #fff;
+    background-color: rgb(var(--primary));
+    z-index: 10110;
+  }
+</style>

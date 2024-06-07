@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  // hide the page loader
+  setTimeout(function () {
+    $("#loading-screen").fadeOut(1000);
+    $(".loading-content").fadeOut(400);
+  }, 1000);
+
   /* include components */
   let includes = document.getElementsByTagName("include");
   for (var i = 0; i < includes.length; i++) {
@@ -14,3 +20,8 @@ $(document).ready(function () {
       .then((text) => callback(text));
   }
 });
+
+function opennavbar(type) {
+  if (type == "open") $("#mobileMenuModel").width("60%");
+  else $("#mobileMenuModel").width("0%");
+}
