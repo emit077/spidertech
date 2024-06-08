@@ -60,10 +60,13 @@ p {
 .list-style-none a :hover {
   text-decoration: underline;
 }
-
+.primary-action-btn :hover {
+  transform: scale(3);
+}
 .primary-action-btn {
   border-radius: 8px !important;
   background: rgb(103, 61, 230);
+  transition-duration: 125ms;
   background: -moz-linear-gradient(
     126deg,
     rgba(103, 61, 230, 1) 29%,

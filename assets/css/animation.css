@@ -1,21 +1,87 @@
 @keyframes move-lr {
-    10%   { left:-50px; top:-200px;}
-    0%   { left:0px; top:0px;}
-    25%  {left:-200px; top:200px;}
-    50%  {left:700px; top:200px;}
-    75%  {left:0px; top:600px;}
-    100% {left:-50px; top:-200px;}
+  10% {
+    left: -50px;
+    top: -200px;
   }
-  @keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: -200px;
+    top: 200px;
+  }
+  50% {
+    left: 700px;
+    top: 200px;
+  }
+  75% {
+    left: 0px;
+    top: 600px;
+  }
+  100% {
+    left: -50px;
+    top: -200px;
+  }
+}
+@keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
 
+.move-circle-grp {
+  position: relative;
+  animation-delay: 1s;
+  animation-name: move-lr;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
 
-  .move-circle-grp{
-    position: relative;
-    animation-delay: 1s;
-    animation-name: move-lr;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
+/*  animate hero title */
+
+.i-bounce {
+  color: #fff;
+  position: relative;
+}
+.i-bounce::before {
+  /* content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
+    height: 24px;
+    width: 5.15px;
+    background: currentColor; */
+}
+.i-bounce::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 104px;
+  top: 10px;
+  border-radius: 50%;
+  border: solid 2.5px rgb(var(--primary));
+  box-sizing: border-box;
+  animation: animloader 2s ease-in infinite;
+}
+
+@keyframes animloader {
+  0% {
+    transform: translateY(8px) scaleY(1) scaleX(1.1);
   }
+  25%,
+  75% {
+    transform: translateY(-5px) scaleY(1.1) scaleX(1);
+  }
+  50% {
+    transform: translateY(-10px) scaleY(1) scaleX(1);
+  }
+  100% {
+    transform: translateY(8px) scaleY(0.8) scaleX(0.8);
+  }
+}
