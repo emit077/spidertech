@@ -25,3 +25,5 @@ function opennavbar(type) {
   if (type == "open") $("#mobileMenuModel").width("100%");
   else $("#mobileMenuModel").width("0%");
 }
+
+

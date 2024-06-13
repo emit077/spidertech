@@ -105,3 +105,20 @@
     transform: translateY(8px) scaleY(0.8) scaleX(0.8);
   }
 }
+
+.animate-show {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: translateX(0%) !important;
+}
+.animate-hidden {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translatey(100%);
+  filter: blur(5px);
+}
+@media (prefer-reduced-motion) {
+  .animate-hidden {
+    transition: none;
+  }
+}
