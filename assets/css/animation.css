@@ -106,19 +106,44 @@
   }
 }
 
+/* scoll animation */
 .animate-show {
   opacity: 1 !important;
   filter: blur(0) !important;
   transform: translateX(0%) !important;
-}
-.animate-hidden {
-  opacity: 0;
-  transition: all 0.5s;
-  transform: translatey(100%);
-  filter: blur(5px);
+  transform: translateY(0%) !important;
+  background-position:left bottom !important;
 }
 @media (prefer-reduced-motion) {
   .animate-hidden {
     transition: none;
   }
+}
+.animate-slide-up {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translatey(100%);
+  filter: blur(5px);
+}
+.animate-slide-left {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateX(-100%);
+  filter: blur(5px);
+}
+.animate-slide-right {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateX(100%);
+  filter: blur(5px);
+}
+
+.animate-fill-bg-right {
+  background: transparent;
+  /* Old browsers */
+  background: linear-gradient(to right,  rgb(var(--neon), 1) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  margin-left:10px;
+  transition:all 1s ease;
 }

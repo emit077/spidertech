@@ -10,8 +10,10 @@
   --neon: 204, 255, 1;
   --teal: 58, 232, 173;
 }
+body,
 html {
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
 }
 
 a {
