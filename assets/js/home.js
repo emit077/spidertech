@@ -74,7 +74,7 @@ $(document).ready(function () {
       $("#DomainItemContainer").append(
         `<div class="col-md-2 col-6 py-0 py-md-4">
       <div class="text-center">
-          <img class="user-profile-img drop-shadow" src="${item.img_url}" alt="" height="90px" />
+          <img class="user-profile-img drop-shadow" src="${item.img_url}" alt="img" height="90px" />
           <h4 class="mt-3 text-gray">${item.title}</h4>
       </div>
   </div>`
@@ -112,10 +112,10 @@ $(document).ready(function () {
       <div class="row">
           <div class="col-md-3 text-center">
               <img class="user-profile-img" src="${item.img_url}"
-                  alt="" />
+                  alt="img" />
           </div>
           <div class="col-md-9">
-              <img class="quote-icon px-2 py-3 mb-2" src="../../assets/icons/quotes.svg" alt="" />
+              <img class="quote-icon px-2 py-3 mb-2" src="../../assets/icons/quotes.svg" alt="img" />
               <h4 class="d-flex align-items-center"
                   style="font-weight: 400;color: rgb(var(--secondary));"> 
                   ${item.text}
