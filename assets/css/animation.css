@@ -147,3 +147,32 @@
   margin-left:10px;
   transition:all 1s ease;
 }
+
+/* nav link animation */
+
+.animate-link{
+  display: block;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.animate-link::after{
+  content: "";
+  width: 0%;
+  height: 1.5px;
+  bottom:4px;
+  bottom: 4px;
+  position: absolute;
+  background:rgb(var(--primary));
+  left: 50%;
+	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  border-radius: 50%;
+}
+
+.animate-link:hover::after{
+  left: 0%;
+  width: 95%;
+}
+
+/* The End */
