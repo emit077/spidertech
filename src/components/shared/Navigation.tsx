@@ -23,6 +23,7 @@ const Navigation: React.FC = () => {
     const nav_items = [
         { name: 'Home', href: '/' },
         { name: 'About', href: '/about' },
+        { name: 'Services', href: '/services' },
         { name: 'Why Spidertech', href: '/why-spidertech' },
         { name: 'Portfolio', href: '/portfolio' },
         { name: 'Contact', href: '/contact' },
