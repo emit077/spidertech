@@ -99,7 +99,7 @@ const TestimonialsSection: React.FC = () => {
                 </motion.div>
 
                 {/* Testimonials Carousel */}
-                <div className="relative max-w-4xl mx-auto">
+                <div className="relative max-w-6xl mx-auto">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={current_testimonial}
@@ -112,7 +112,7 @@ const TestimonialsSection: React.FC = () => {
                             }}
                             className="relative"
                         >
-                            <div className="bg-gradient-to-br from-white via-gray-50 to-purple-50 dark:from-gray-800 dark:via-gray-900 dark:to-purple-900/20 rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-200/50 dark:border-gray-700/50 relative overflow-hidden backdrop-blur-sm">
+                            <div className="bg-gradient-to-br from-white via-gray-50 to-purple-50 dark:from-gray-800 dark:via-gray-900 dark:to-purple-900/20 rounded-3xl p-8 md:p-12 border border-gray-200/50 dark:border-gray-700/50 relative overflow-hidden backdrop-blur-sm">
                                 {/* Background Decorative Elements */}
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400/10 to-pink-400/10 dark:from-purple-400/5 dark:to-pink-400/5 rounded-full blur-3xl"></div>
                                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 dark:from-blue-400/5 dark:to-cyan-400/5 rounded-full blur-3xl"></div>

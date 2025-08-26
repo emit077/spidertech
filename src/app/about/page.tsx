@@ -45,7 +45,7 @@ export default function AboutPage() {
                     <div className="text-center max-w-4xl mx-auto">
 
 
-                        <h1 className="text-5xl md:text-7xl font-bold mb-8" style={{ lineHeight: '1.2' }}>
+                        <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 dark:text-white" style={{ lineHeight: '1.2' }}>
                             We&apos;re Building the
                             <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                                 Future of Digital
@@ -84,7 +84,7 @@ export default function AboutPage() {
                 <div className="container-custom relative z-10">
                     {/* Section Header */}
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
                             Mission & Vision
                         </h2>
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -209,7 +209,7 @@ export default function AboutPage() {
             <section className="py-20 bg-white dark:bg-gray-800">
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
                             Our Impact in Numbers
                         </h2>
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -243,7 +243,7 @@ export default function AboutPage() {
             <section className="py-20 bg-gray-50 dark:bg-gray-900">
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
                             Our Core Values
                         </h2>
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">

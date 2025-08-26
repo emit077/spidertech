@@ -42,7 +42,7 @@ export default function ContactPage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
                 <div className="container-custom relative z-10">
                     <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h1 className="text-5xl md:text-7xl font-bold mb-8" style={{ lineHeight: '1.2' }}>
+                        <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 dark:text-white" style={{ lineHeight: '1.2' }}>
                             Let&apos;s Build Something
                             <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                                 Amazing Together
@@ -83,7 +83,7 @@ export default function ContactPage() {
             <section className="py-20 bg-gray-50 dark:bg-gray-900/50">
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
                             Multiple Ways to Connect
                             <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                                 With Us
