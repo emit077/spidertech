@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
                         <img
-                            src={theme === 'dark' ? '/logo/logo-white.svg' : '/logo/logo.svg'}
+                            src={theme === 'dark' ? '/logo/logo-white.svg' : '/logo/logo-solid.svg'}
                             alt="Spidertech"
                             className="h-8 md:h-10 w-auto"
                         />

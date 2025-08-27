@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TestimonialsSection: React.FC = () => {
     const testimonials = [
@@ -61,6 +61,21 @@ const TestimonialsSection: React.FC = () => {
         return () => clearInterval(progressInterval);
     }, [isAutoPlaying, current_testimonial, testimonials.length]);
 
+    // Navigation functions
+    const next_testimonial = () => {
+        set_current_testimonial((current) => (current + 1) % testimonials.length);
+        setProgress(0);
+        setIsAutoPlaying(false);
+        setTimeout(() => setIsAutoPlaying(true), 10000);
+    };
+
+    const prev_testimonial = () => {
+        set_current_testimonial((current) => (current - 1 + testimonials.length) % testimonials.length);
+        setProgress(0);
+        setIsAutoPlaying(false);
+        setTimeout(() => setIsAutoPlaying(true), 10000);
+    };
+
     // Pause auto-play when user interacts with dots
     const handleDotClick = (index: number) => {
         set_current_testimonial(index);
@@ -70,8 +85,6 @@ const TestimonialsSection: React.FC = () => {
         // Resume auto-play after 10 seconds of inactivity
         setTimeout(() => setIsAutoPlaying(true), 10000);
     };
-
-    // Remove manual navigation functions since we're using auto-play
 
     return (
         <section className="section-padding">
@@ -99,15 +112,15 @@ const TestimonialsSection: React.FC = () => {
                 </motion.div>
 
                 {/* Testimonials Carousel */}
-                <div className="relative max-w-6xl mx-auto">
+                <div className="relative max-w-6xl mx-auto overflow-hidden">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={current_testimonial}
-                            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                            initial={{ opacity: 0, x: 100, scale: 0.9 }}
+                            animate={{ opacity: 1, x: 0, scale: 1 }}
+                            exit={{ opacity: 0, x: -100, scale: 0.9 }}
                             transition={{
-                                duration: 0.6,
+                                duration: 0.8,
                                 ease: [0.4, 0.0, 0.2, 1]
                             }}
                             className="relative"
@@ -121,8 +134,8 @@ const TestimonialsSection: React.FC = () => {
                                     {/* Header Section */}
                                     <div className="flex items-start justify-between mb-8">
                                         {/* Quote Icon */}
-                                        <div className="inline-flex p-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg dark:shadow-purple-500/25">
-                                            <Quote className="h-6 w-6 text-white" />
+                                        <div className="inline-flex p-4 rounded-2xl ">
+                                            <Quote className="h-32 w-32 mt-5 text-purple-50 absolute top-1 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                                         </div>
 
                                         {/* Rating */}
@@ -134,22 +147,29 @@ const TestimonialsSection: React.FC = () => {
                                     </div>
 
                                     {/* Content */}
-                                    <blockquote className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8 italic relative">
+                                    <motion.blockquote
+                                        className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8 italic relative"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.6, delay: 0.2 }}
+                                    >
                                         <div className="absolute -top-2 -left-2 text-6xl text-purple-200 dark:text-purple-800/60 font-serif">&ldquo;</div>
                                         <div className="relative z-10 pl-8">
                                             {testimonials[current_testimonial].content}
                                         </div>
-                                    </blockquote>
+                                    </motion.blockquote>
 
                                     {/* Author Section */}
-                                    <div className="flex items-center space-x-4 p-6 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl border border-purple-200/30 dark:border-purple-700/30 backdrop-blur-sm">
+                                    <motion.div
+                                        className="flex items-center space-x-4 p-6 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl border border-purple-200/30 dark:border-purple-700/30 backdrop-blur-sm"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.6, delay: 0.4 }}
+                                    >
                                         {/* Avatar */}
                                         <div className="relative">
                                             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg dark:shadow-purple-500/25">
                                                 {testimonials[current_testimonial].name.charAt(0)}
-                                            </div>
-                                            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white dark:border-gray-800 flex items-center justify-center shadow-sm">
-                                                <div className="w-2 h-2 bg-white rounded-full"></div>
                                             </div>
                                         </div>
 
@@ -167,11 +187,11 @@ const TestimonialsSection: React.FC = () => {
                                         </div>
 
                                         {/* Verification Badge */}
-                                        <div className="flex items-center space-x-2 bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full border border-green-200 dark:border-green-700/30">
+                                        {/* <div className="flex items-center space-x-2 bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full border border-green-200 dark:border-green-700/30">
                                             <div className="w-2 h-2 bg-green-500 rounded-full shadow-sm"></div>
                                             <span className="text-xs font-semibold text-green-700 dark:text-green-300">Verified</span>
-                                        </div>
-                                    </div>
+                                        </div> */}
+                                    </motion.div>
 
                                     {/* Bottom Decoration */}
                                     <div className="mt-6 flex justify-center">
@@ -180,52 +200,43 @@ const TestimonialsSection: React.FC = () => {
                                 </div>
                             </div>
                         </motion.div>
-                    </AnimatePresence>
+                    </AnimatePresence >
 
-                    {/* Navigation Buttons */}
-                    {/* <div className="flex justify-center">
-                        <button
+                    {/* Navigation Arrows */}
+                    {/* < div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-20" >
+                        <motion.button
                             onClick={prev_testimonial}
-                            className=" transform -translate-y-1/2 p-4 rounded-2xl  dark:bg-gray-800 transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700 backdrop-blur-sm"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="p-3 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300"
                             aria-label="Previous testimonial"
                         >
-                            <ChevronLeft className="h-6 w-6 text-gray-600 dark:text-gray-300" />
-                        </button>
+                            <ChevronLeft className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+                        </motion.button>
+                    </div >
 
-                        <button
+                    <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-20">
+                        <motion.button
                             onClick={next_testimonial}
-                            className=" top-1/2 transform -translate-y-1/2 p-4 rounded-2xl  dark:bg-gray-800 transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700 backdrop-blur-sm"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="p-3 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300"
                             aria-label="Next testimonial"
                         >
-                            <ChevronRight className="h-6 w-6 text-gray-600 dark:text-gray-300" />
-                        </button>
+                            <ChevronRight className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+                        </motion.button>
                     </div> */}
 
                     {/* Dots Indicator with Auto-play Status */}
                     <div className="flex flex-col items-center mt-8 space-y-4">
-                        {/* Progress Bar */}
-                        <div className="w-full max-w-xs">
-                            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1 shadow-inner">
-                                <motion.div
-                                    className="bg-gradient-to-r from-purple-500 to-pink-500 h-1 rounded-full shadow-sm"
-                                    style={{ width: `${progress}%` }}
-                                    transition={{ duration: 0.1 }}
-                                />
-                            </div>
-                        </div>
-
-                        {/* Auto-play indicator */}
-                        <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                            <div className={`w-2 h-2 rounded-full transition-all duration-300 shadow-sm ${isAutoPlaying ? 'bg-green-500 animate-pulse' : 'bg-gray-400 dark:bg-gray-500'}`}></div>
-                            <span>{isAutoPlaying ? 'Auto-playing' : 'Paused'}</span>
-                        </div>
-
                         {/* Dots */}
                         <div className="flex space-x-3">
                             {testimonials.map((_, index) => (
-                                <button
+                                <motion.button
                                     key={index}
                                     onClick={() => handleDotClick(index)}
+                                    whileHover={{ scale: 1.2 }}
+                                    whileTap={{ scale: 0.9 }}
                                     className={`w-4 h-4 rounded-full transition-all duration-300 ${index === current_testimonial
                                         ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125 shadow-lg dark:shadow-purple-500/25'
                                         : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 hover:scale-110 shadow-sm'
@@ -235,10 +246,10 @@ const TestimonialsSection: React.FC = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div >
 
                 {/* Stats */}
-                <motion.div
+                < motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -269,9 +280,9 @@ const TestimonialsSection: React.FC = () => {
                             Repeat Client Rate
                         </div>
                     </div>
-                </motion.div>
-            </div>
-        </section>
+                </motion.div >
+            </div >
+        </section >
     );
 };
 
