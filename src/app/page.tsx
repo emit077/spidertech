@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { Navigation, Footer } from '@/components/shared';
-import { HeroSection, VelocitySection, AboutSection, ServicesSection, TestimonialsSection, CTASection } from '@/components/home';
+import { HeroSection, VelocitySection, ServicesSection, TestimonialsSection, CTASection } from '@/components/home';
 
 export const metadata: Metadata = {
   title: 'Spidertech.in - Innovative Web Solutions & Digital Transformation',
@@ -37,7 +37,7 @@ export default function HomePage() {
       <Navigation />
       <HeroSection />
       <VelocitySection />
-      {/* <AboutSection /> */}
+
       <ServicesSection />
       <TestimonialsSection />
       <CTASection />

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Lightbulb, Code, TestTube, Rocket, CheckCircle, ArrowRight } from 'lucide-react';
+import { Lightbulb, Code, TestTube, Rocket, CheckCircle, ArrowRight } from 'lucide-react';
 
 const ProcessSection: React.FC = () => {
     const processSteps = [

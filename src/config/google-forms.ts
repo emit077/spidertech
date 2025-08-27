@@ -33,7 +33,7 @@ export const GOOGLE_FORMS_CONFIG = {
 // Test function to verify Google Forms URL
 export const testGoogleFormsURL = async (): Promise<boolean> => {
     try {
-        const response = await fetch(GOOGLE_FORMS_CONFIG.FORM_URL, {
+        await fetch(GOOGLE_FORMS_CONFIG.FORM_URL, {
             method: 'HEAD',
             mode: 'no-cors'
         });
@@ -69,7 +69,7 @@ export const testEntryIDs = async (): Promise<boolean> => {
         testData.append(test.id, test.value);
         
         try {
-            const response = await fetch(FORM_URL, {
+            await fetch(FORM_URL, {
                 method: 'POST',
                 body: testData,
                 mode: 'no-cors'

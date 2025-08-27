@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Star, Users, Globe } from 'lucide-react';
-import { WEBSITE_STATS, ACHIEVEMENTS } from '@/constants';
+import { WEBSITE_STATS } from '@/constants';
 
 
 const PortfolioHero: React.FC = () => {

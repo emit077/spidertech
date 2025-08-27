@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Clock, DollarSign, Users, Zap, Bot, Lightbulb, ArrowRight, CheckCircle, XCircle, IndianRupee } from 'lucide-react';
+import { Rocket, Clock, Users, Zap, Bot, Lightbulb, ArrowRight, CheckCircle, XCircle, IndianRupee } from 'lucide-react';
 
 const VelocitySection: React.FC = () => {
   const challenges = [

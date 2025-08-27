@@ -11,8 +11,6 @@ import {
     Shield,
     Zap,
     Code,
-    BarChart3,
-    MessageSquare,
     Cloud
 } from 'lucide-react';
 

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Bot, Users, Zap, Brain, Shield } from 'lucide-react';
+import { Bot, Users, Zap, Brain, Shield } from 'lucide-react';
 
 const WhySpidertechHero: React.FC = () => {
     const highlights = [

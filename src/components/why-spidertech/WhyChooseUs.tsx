@@ -1,48 +1,10 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, CheckCircle, XCircle, ArrowRight, Clock, DollarSign, Users, Shield, Zap, Star } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, Clock, DollarSign, Shield, Zap, Star } from 'lucide-react';
 import { WEBSITE_STATS } from '@/constants';
 
 const WhyChooseUs: React.FC = () => {
-    const advantages = [
-        {
-            icon: Zap,
-            title: 'Lightning Fast Delivery',
-            description: 'AI-powered development reduces project timelines by 60%',
-            benefit: 'Get to market faster than your competitors'
-        },
-        {
-            icon: DollarSign,
-            title: 'Cost-Effective Solutions',
-            description: 'Optimized development processes reduce costs by 40%',
-            benefit: 'Maximize ROI with intelligent resource allocation'
-        },
-        {
-            icon: Shield,
-            title: 'Enterprise-Grade Security',
-            description: 'AI-powered security testing and threat detection',
-            benefit: 'Protect your business with advanced security measures'
-        },
-        {
-            icon: Users,
-            title: 'Expert Team Support',
-            description: '24/7 access to seasoned development professionals',
-            benefit: 'Get expert guidance whenever you need it'
-        },
-        {
-            icon: Star,
-            title: 'Quality Guaranteed',
-            description: 'Rigorous testing and quality assurance processes',
-            benefit: 'Deliver flawless products that exceed expectations'
-        },
-        {
-            icon: Clock,
-            title: 'Ongoing Maintenance',
-            description: 'Continuous monitoring and proactive maintenance',
-            benefit: 'Keep your systems running smoothly 24/7'
-        }
-    ];
 
     const comparisons = [
         {
