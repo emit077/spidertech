@@ -1,79 +1,280 @@
-<section id="hero" class="">
-    <div class="hero-section-wrapper app-padding  pb-md-0">
-        <div class="row pb-md-5">
-            <div class="col-md-6 col-sm-12 mt-auto mb-auto order-last py-5">
-                <div class="py-md-5 my-md-5 text-center text-md-start">
-                    <h1 class="hero-title">
-                        Transforming <br>
-                        <span>Ideas</span> into <br>
-                        <span class="">Dig<span class="i-bounce">I</span>tal Reality</span> <br>
-                        Backed by AI
+<section class="hero position-relative overflow-hidden bg-light">
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+        style="background: linear-gradient(135deg, rgba(var(--primary), 0.05) 0%, rgba(var(--secondary), 0.05) 100%);">
+    </div>
+
+    <!-- Geometric Shapes -->
+    <div class="position-absolute" style="top: 15%; left: 10%; width: 40px; height: 40px; 
+         background: rgba(var(--primary), 0.1); border-radius: 8px; transform: rotate(45deg);">
+    </div>
+    <div class="position-absolute" style="bottom: 20%; right: 5%; width: 60px; height: 60px; 
+         border: 3px solid rgba(var(--accent), 0.2); border-radius: 50%;">
+    </div>
+
+    <div class="container position-relative">
+        <div class="row min-vh-100 align-items-center py-5">
+            <!-- Content Side -->
+            <div class="col-lg-6 order-2 order-lg-1">
+                <div class="pe-lg-4 stagger-animation">
+                    <!-- Badge -->
+                    <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4"
+                        style="background: rgba(var(--primary), 0.1)">
+                        <i class="mdi mdi-rocket text-primary"></i>
+                        <span class="text-primary small fw-semibold">Innovate & Scale</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="display-4 fw-bold mb-4 lh-sm">
+                        Elevate Your Business with
+                        <span class="text-gradient">Next-Gen</span>
+                        Technology Solutions
                     </h1>
-                    <h5 class="my-5 fw-light  ">
-                        Experience cutting-edge performance and intelligent design. Partner with us, and make every
-                        moment of your time a guaranteed investment in success.
-                    </h5>
-                    <a href="#" class="primary-action-btn" style="padding: 14px 20px;" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        Build your product with us!
-                    </a>
+
+                    <!-- Description -->
+                    <p class="lead text-gray-600 mb-5">
+                        We transform challenges into opportunities through innovative software solutions,
+                        AI integration, and cloud expertise. Your vision, our technical excellence.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <a href="#" class="btn btn-primary btn-lg rounded-pill shadow-sm" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">
+                            <i class="mdi mdi-lightning-bolt-outline me-2"></i>
+                            Start Your Project
+                        </a>
+                        <a href="#services" class="btn btn-outline-primary btn-lg rounded-pill">
+                            <i class="mdi mdi-cube-outline me-2"></i>
+                            Explore Services
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="row g-4 text-center text-sm-start">
+                        <div class="col-sm-4">
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-sm-start gap-2">
+                                <i class="mdi mdi-check-circle text-primary fs-4"></i>
+                                <div>
+                                    <h4 class="h6 mb-1">AI Powered</h4>
+                                    <p class="small text-gray-600 mb-0">Smart Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-sm-start gap-2">
+                                <i class="mdi mdi-shield-check text-primary fs-4"></i>
+                                <div>
+                                    <h4 class="h6 mb-1">ISO Certified</h4>
+                                    <p class="small text-gray-600 mb-0">Quality Assured</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-sm-start gap-2">
+                                <i class="mdi mdi-clock-check text-primary fs-4"></i>
+                                <div>
+                                    <h4 class="h6 mb-1">24/7 Support</h4>
+                                    <p class="small text-gray-600 mb-0">Always Available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 img-wrapper order-md-last  order-first " style="align-items: center;">
-                <img src="./assets/images/home/hero.png" alt="img" width="100%" class="pt-5 pt-md-0" />
+
+            <!-- Image Side with 3D Elements -->
+            <div class="col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0">
+                <div class="position-relative hero-image-wrapper">
+                    <div class="position-absolute top-50 start-50 translate-middle hero-glow"></div>
+                    <img src="./assets/images/home/hero.png" alt="Digital Innovation"
+                        class="img-fluid position-relative" style="z-index: 1;">
+                    <!-- Floating Elements -->
+                    <div class="float-element position-absolute top-25 start-25">
+                        <div class="bg-white p-2 rounded-3 shadow-sm">
+                            <i class="mdi mdi-brain text-primary"></i>
+                        </div>
+                    </div>
+                    <div class="float-element position-absolute bottom-25 end-25">
+                        <div class="bg-white p-2 rounded-3 shadow-sm">
+                            <i class="mdi mdi-rocket text-primary"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <style>
-    @media (max-width: 768px) {
-        #hero .hero-title {
-            font-size: 45px !important;
-            font-weight: 800;
-            line-height: 110%;
-        }
-
-        #hero .hero-title span {
-            color: rgb(var(--primary), 1);
-        }
-
-        #hero .img-wrapper {
-            align-items: end;
-            display: flex;
-            justify-content: top;
-        }
-
-    }
-
-    /* he[ro section */
-    #hero {
-        background: rgb(255, 255, 255);
-        background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 1) 7%, rgba(239, 249, 255, 1) 100%);
-        background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 1) 7%, rgba(239, 249, 255, 1) 100%);
+    .hero-gradient {
         background: linear-gradient(180deg, rgba(255, 255, 255, 1) 7%, rgba(239, 249, 255, 1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#eff9ff", GradientType=1);
     }
 
-    /* #hero .hero-section-wrapper {
-        background-image: url("../../assets/images/home/hero-bg.png");
-        background-position-y: 110%;
-        background-repeat: no-repeat;
-    } */
-
-    #hero .hero-title {
-        font-size: 65px;
+    .hero-title {
+        font-size: 3.5rem;
         font-weight: 800;
-        line-height: 120%;
+        line-height: 1.2;
     }
 
-    #hero .hero-title span {
-        color: rgb(var(--primary), 1);
+    .hero-title .highlight {
+        color: rgb(var(--primary));
+        position: relative;
+        display: inline-block;
     }
 
-    #hero .img-wrapper {
-        align-items: end;
-        display: flex;
-        justify-content: end;
+    .hero-title .highlight::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: rgba(var(--primary), 0.1);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+    .hero-glow {
+        width: 450px;
+        height: 450px;
+        background: radial-gradient(circle, rgba(var(--primary), 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    .float-element {
+        animation: float 3s infinite ease-in-out;
+    }
+
+    .float-element:nth-child(even) {
+        animation-delay: 1.5s;
+    }
+
+    .hero-image-wrapper {
+        perspective: 1000px;
+    }
+
+    .hero-image-wrapper img {
+        transform: rotateY(-5deg);
+        transition: transform 0.3s ease;
+    }
+
+    .hero-image-wrapper:hover img {
+        transform: rotateY(0deg);
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .trust-badges {
+        border-top: 1px solid rgba(var(--primary), 0.1);
+        padding-top: 1.5rem;
+    }
+
+    /* Large devices (desktops, less than 1200px) */
+    @media (max-width: 1199.98px) {
+        .hero-title {
+            font-size: 3rem;
+        }
+
+        .hero-glow {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    /* Medium devices (tablets, less than 992px) */
+    @media (max-width: 991.98px) {
+        .hero-title {
+            font-size: 2.8rem;
+        }
+
+        .hero-glow {
+            width: 350px;
+            height: 350px;
+        }
+
+        .container {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+
+    /* Small devices (landscape phones, less than 768px) */
+    @media (max-width: 767.98px) {
+        .hero-title {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .trust-badges {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 2rem !important;
+        }
+
+        .hero-image-wrapper {
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .float-element {
+            display: none;
+        }
+
+        .d-flex.gap-3 {
+            justify-content: center;
+        }
+
+        .pe-md-4 {
+            text-align: center;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .rounded-pill.mb-3 {
+            margin: 0 auto;
+            display: table;
+        }
+    }
+
+    /* Extra small devices (portrait phones, less than 576px) */
+    @media (max-width: 575.98px) {
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-image-wrapper {
+            max-width: 240px;
+        }
+
+        .btn-lg {
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+        }
+
+        .container {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .hero-glow {
+            width: 280px;
+            height: 280px;
+        }
     }
 </style>
